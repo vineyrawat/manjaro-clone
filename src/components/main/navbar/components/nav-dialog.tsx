@@ -1,13 +1,9 @@
 import { Transition } from "@headlessui/react";
 import React, { Fragment, useState } from "react";
-import {
-  AiOutlinePoweroff,
-  AiOutlineSetting,
-  AiOutlineUser,
-} from "react-icons/ai";
 import { BiSun, BiMoon } from "react-icons/bi";
-import { FaBluetoothB, FaMoon, FaWifi } from "react-icons/fa";
+import { FaBluetoothB, FaWifi } from "react-icons/fa";
 import ToggleButton from "./nav-dialog-components/toggle-button";
+import User from "./nav-dialog-components/user";
 
 interface Props {
   isOpen: boolean;
@@ -40,23 +36,8 @@ const NavDialog = ({ isOpen, refName }: Props) => {
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
         >
-          <div className="w-96 transition-all transform bg-white dark:bg-gray-800 bg-opacity-70 dark:bg-opacity-70 backdrop-blur-md shadow-xl rounded-2xl p-5">
-            <div className="flex justify-between items-center ">
-              <div className="flex items-center">
-                <div className="flex items-center justify-center bg-gradient-to-tr from-blue-500 to-blue-400 w-10 h-10 text-white rounded-full text-xl">
-                  <AiOutlineUser />
-                </div>
-                <h2 className="ml-2">Manjaro</h2>
-              </div>
-              <div className="flex items-center space-x-2">
-                <button className="p-2 text-xl text-gray-800 dark:text-gray-100 transition-colors rounded-md hover:bg-white dark:hover:bg-gray-900">
-                  <AiOutlineSetting />
-                </button>
-                <button className="p-2 text-xl text-gray-800 dark:text-gray-100 transition-colors rounded-md hover:bg-white dark:hover:bg-gray-900">
-                  <AiOutlinePoweroff />
-                </button>
-              </div>
-            </div>
+          <div className="w-96 transition-all transform bg-white dark:bg-gray-800 bg-opacity-70 dark:bg-opacity-70 shadow-xl rounded-2xl p-5">
+            <User />
             <div className="flex space-x-3 mt-5">
               <ToggleButton
                 isActive={wifi}
