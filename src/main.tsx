@@ -4,7 +4,7 @@ import Manjaro from "./components/manjaro";
 
 const Main = () => {
   return (
-    <div className="dark">
+    <div>
       <Manjaro />
     </div>
   );
