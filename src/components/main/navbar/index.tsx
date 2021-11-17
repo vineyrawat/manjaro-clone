@@ -12,7 +12,7 @@ const Navbar = () => {
     <>
       <div className="flex px-2 h-6 w-full bg-white dark:bg-black bg-opacity-90 dark:bg-opacity-40 backdrop-blur-sm items-center justify-between">
         <div className="flex items-center text-sm cursor-pointer">
-          Applications
+          Applications edit
         </div>
         <RightMenu onClick={handleShow} />
         <NavDialog refName={ref} isOpen={show} />
