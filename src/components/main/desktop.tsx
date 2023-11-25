@@ -2,6 +2,8 @@ import React from "react";
 import BackgroundImage from "../../assets/wallpapers/macoswhitesur.jpg";
 import Dock from "./dock";
 import Navbar from "./navbar";
+import Draggable from "react-draggable";
+import DraggableWindow from "./draggable-window/draggableWindow";
 
 const Desktop = () => {
   return (
@@ -10,7 +12,9 @@ const Desktop = () => {
       style={{ backgroundImage: `url('${BackgroundImage}')` }}
     >
       <Navbar />
-      <div className="flex-1"></div>
+      <div className="flex-1 pt-6">
+        <DraggableWindow />
+      </div>
       <Dock />
     </div>
   );
